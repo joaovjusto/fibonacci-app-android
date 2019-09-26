@@ -1,5 +1,6 @@
 package com.example.fibonacci
 
+import android.content.Intent
 import android.os.Bundle
 import com.google.android.material.snackbar.Snackbar
 import androidx.appcompat.app.AppCompatActivity
@@ -20,8 +21,16 @@ class MainActivity : AppCompatActivity() {
         setSupportActionBar(toolbar)
 
         fab.setOnClickListener { view ->
-            Snackbar.make(view, "Evento de clique", Snackbar.LENGTH_LONG)
-                    .setAction("Action", null).show()
+            //Snackbar.make(view, "Evento de clique", Snackbar.LENGTH_LONG)
+            //        .setAction("Action", null).show()
+
+            //Intent mandar para outra tela
+
+            val intent = Intent(this, ListagemActivity::class.java)
+            // To pass any data to next activity
+            // intent.putExtra("keyIdentifier", value)
+            // start your next activity
+            startActivity(intent)
         }
 
         //Scrollbar
